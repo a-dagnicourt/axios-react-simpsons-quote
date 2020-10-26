@@ -4,6 +4,7 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import QuoteCard from './components/QuoteCard';
+import QuoteForm from './components/QuoteForm';
 
 class App extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends Component {
     return (
       <div className='App'>
         <h1>The Simpsons Quotes Generator</h1>
+        <QuoteForm />
         <button className='myButton' type='button' onClick={this.randomQuote}>
           Randomize
         </button>
