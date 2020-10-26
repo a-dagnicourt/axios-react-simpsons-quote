@@ -13,14 +13,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios
-      .get('https://thesimpsonsquoteapi.glitch.me/quotes')
-      .then((response) => response.data)
-      .then((data) => {
-        this.setState({
-          simpson: data[0],
-        });
+    axios.get('https://thesimpsonsquoteapi.glitch.me/quotes').then((res) => {
+      const simpson = res.data[0];
+      this.setState({
+        simpson,
       });
+    });
   }
 
   render() {
